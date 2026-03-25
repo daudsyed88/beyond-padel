@@ -1,0 +1,103 @@
+.section {
+  padding: clamp(4rem, 10vw, 8rem) clamp(2rem, 8vw, 8rem);
+  background: var(--bg-secondary);
+}
+.inner { max-width: 1200px; margin: 0 auto; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+@media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+.card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2.2rem;
+  position: relative;
+  transition: transform .3s, border-color .3s, box-shadow .3s;
+}
+.card:hover { transform: translateY(-6px); border-color: var(--bl); box-shadow: 0 20px 50px rgba(10,110,255,.2); }
+.highlight { border-color: var(--bl); }
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bl);
+  color: #fff;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .3rem .9rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.planLabel {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--tm);
+  margin-bottom: .6rem;
+}
+.price {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--bl);
+  line-height: 1;
+  margin-bottom: 1.4rem;
+}
+.unit { font-size: 1.1rem; color: var(--tm); font-family: var(--font-body); font-weight: 500; }
+.features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+  margin-bottom: 2rem;
+}
+.features li {
+  font-size: .85rem;
+  color: var(--tm);
+  padding-left: 1.2rem;
+  position: relative;
+}
+.features li::before { content: '→'; position: absolute; left: 0; color: var(--bl); }
+
+.cta {
+  display: block;
+  text-align: center;
+  background: var(--bl);
+  border: 1px solid var(--bl);
+  color: #fff;
+  font-weight: 800;
+  font-size: .85rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all .3s ease;
+  box-shadow: 0 4px 15px rgba(10, 110, 255, 0.2);
+  cursor: pointer;
+}
+
+.cta:hover { 
+  background: #0858cc; 
+  border-color: #0858cc;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(10, 110, 255, 0.4);
+}
+
+.highlight .cta {
+  background: var(--gr) !important;
+  border-color: var(--gr) !important;
+  color: #000 !important;
+}
+
+.highlight .cta:hover {
+  background: #8fb100 !important;
+  border-color: #8fb100 !important;
+}

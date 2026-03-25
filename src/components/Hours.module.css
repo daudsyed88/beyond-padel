@@ -1,0 +1,59 @@
+.section {
+  padding: 5rem clamp(2.5rem, 5vw, 6rem);
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  color: var(--bl);
+}
+
+.sub {
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--tm);
+  margin: .6rem 0 2.5rem;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.timingBox {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+.label {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  color: var(--bl);
+}
+
+.hl {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #fff;
+  font-family: var(--font-display);
+}
+
+@media (max-width: 640px) {
+  .grid { flex-direction: column; gap: 2rem; }
+  .title { font-size: 2.5rem; }
+}

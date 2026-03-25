@@ -1,0 +1,87 @@
+.section {
+  padding: clamp(4rem, 10vw, 8rem) clamp(2rem, 8vw, 8rem);
+  background: var(--bg-secondary);
+}
+.inner { max-width: 1200px; margin: 0 auto; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+@media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+.card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform .3s, border-color .3s;
+}
+.card:hover { transform: translateY(-4px); }
+.past { border-color: rgba(255, 255, 255, 0.1); opacity: 0.8; }
+.past:hover { border-color: rgba(255, 255, 255, 0.2); }
+.upcoming { 
+  border: 1px dashed var(--bl); 
+  background: rgba(10, 110, 255, 0.05);
+}
+.upcoming:hover { border-color: var(--bl); background: rgba(10, 110, 255, 0.08); }
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gr);
+  margin-bottom: .8rem;
+}
+
+.pulseDot {
+  width: 8px;
+  height: 8px;
+  background: var(--gr);
+  border-radius: 50%;
+  position: relative;
+}
+.pulseDot::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: var(--gr);
+  opacity: 0.4;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.4; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+.title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: .6rem;
+}
+.desc { color: var(--tm); font-size: .85rem; line-height: 1.6; margin-bottom: 1.5rem; }
+
+.cta {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: transparent;
+  border: 1px solid var(--bl);
+  color: var(--bl);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.cta:hover {
+  background: var(--bl);
+  color: #fff;
+}
