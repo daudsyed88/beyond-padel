@@ -11,7 +11,6 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import FloatingSocials from './components/FloatingSocials'
 import BookingSystem from './components/BookingSystem'
-import MobileStickyBar from './components/MobileStickyBar'
 
 function App() {
   const [bookingSport, setBookingSport] = useState(null)
@@ -39,14 +38,6 @@ function App() {
         preSelectedSport={typeof bookingSport === 'string' ? bookingSport : null}
         onClose={() => setBookingSport(null)} 
       />
-      <div style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
-        <style>{`
-          @media (max-width: 768px) {
-            body { padding-bottom: 64px; }
-          }
-        `}</style>
-      </div>
-      <MobileStickyBar onBook={() => handleBook()} />
     </>
   )
 }

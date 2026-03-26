@@ -166,8 +166,6 @@ ${sportSpecific}
 
 Additional Notes: ${formData.notes && !['cafe', 'inquiry'].includes(formData.sport) ? formData.notes : (formData.notes || 'None')}
 
-━━━━━━━━━━━━━━━━━━━━━━
-Sent via beyondpadel.com
 Please confirm availability. 🙏`
 
     const url = `https://wa.me/923013202630?text=${encodeURIComponent(message)}`
